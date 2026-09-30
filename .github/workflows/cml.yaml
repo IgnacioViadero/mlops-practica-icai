@@ -34,7 +34,7 @@ jobs:
 
       - name: DVC Pull
         env:
-          DAGSHUB_API_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
+          DAGSHUB_USERNAME: ${{ secrets.DAGSHUB_USERNAME }}
           DAGSHUB_API_KEY: ${{ secrets.DAGSHUB_API_KEY }}
         run: |
           dvc remote modify origin --local auth basic
