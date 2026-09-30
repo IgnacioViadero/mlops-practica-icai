@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-tracking_uri = os.getenv("MLFLOW_TRACKING_URI", "https://dagshub.com/IgnacioViadero/mlops-practica-icai.mlflow")
+tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
 mlflow.set_tracking_uri(tracking_uri)
 
 try: 
