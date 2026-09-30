@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -15,7 +15,7 @@ jobs:
         uses: iterative/setup-dvc@v1
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -25,7 +25,7 @@ jobs:
           git config --global user.name "TUUSUARIO"
 
       - name: Restore DVC Cache
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.cache/dvc
           key: dvc-cache-${{ hashFiles('dvc.yaml', 'dvc.lock') }}
