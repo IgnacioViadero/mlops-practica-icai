@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Setup CML
-        uses: dvcorg/cml-action@v1
+        uses: iterative/setup-cml@v2
 
       - name: Configure Git
         run: |
