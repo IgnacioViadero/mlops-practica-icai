@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
+# Pedimos la url para el MLFLOW a los secrets de GitHub Actions
 tracking_uri = os.getenv("MLFLOW_TRACKING_URI")
 mlflow.set_tracking_uri(tracking_uri)
 
@@ -18,6 +19,7 @@ try:
 
 except FileNotFoundError: 
     print("Error: El archivo 'data/iris_dataset.csv' no fue encontrado.")
+
 
 X = iris.drop('target', axis=1) 
 y = iris['target']
