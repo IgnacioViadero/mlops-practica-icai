@@ -19,6 +19,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Setup CML
+        uses: dvcorg/cml-action@v1
+
       - name: Configure Git
         run: |
           git config --global user.email "TUEMAIL"
@@ -45,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip install cml pyyaml
+          pip install pyyaml
           pip install -r requirements.txt
 
       - name: Run training script
